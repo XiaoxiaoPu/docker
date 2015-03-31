@@ -1,4 +1,4 @@
- # Arch Linux ARM #
+# Arch Linux ARM #
 
 A minimal Arch Linux ARM docker image for i686/x86_64 host.
 
