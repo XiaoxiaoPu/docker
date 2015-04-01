@@ -15,6 +15,9 @@ arch-chroot $ROOTFS /bin/sh -c 'ln -s /usr/share/zoneinfo/UTC /etc/localtime'
 echo 'en_US.UTF-8 UTF-8' > $ROOTFS/etc/locale.gen
 arch-chroot $ROOTFS locale-gen
 
+# fix pacman.conf
+cp ./pacman.conf $ROOTFS/etc/pacman.conf
+
 # rebuild /dev
 DEV=$ROOTFS/dev
 rm -rf $DEV

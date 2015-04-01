@@ -50,7 +50,7 @@ mknod -m 666 $DEV/ptmx c 5 2
 ln -sf /proc/self/fd $DEV/fd
 
 # binfmt_misc
-echo '-1' > /proc/sys/fs/binfmt_misc/register/arm
+echo '-1' > /proc/sys/fs/binfmt_misc/arm
 
 # tar
 tar --numeric-owner --xattrs --acls -C $ROOTFS -cf rootfs.tar .
