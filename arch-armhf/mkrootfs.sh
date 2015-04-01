@@ -4,7 +4,7 @@
 
 set -e
 
-ROOTFS=/tmp/alarmrootfs
+ROOTFS=/tmp/armhf-rootfs
 mkdir -p $ROOTFS
 chmod 755 $ROOTFS
 
