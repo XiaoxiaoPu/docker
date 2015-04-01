@@ -11,6 +11,7 @@ chmod 755 $ROOTFS
 pacstrap -C ./pacman.conf -d -G $ROOTFS pacman sed shadow
 
 arch-chroot $ROOTFS /bin/sh -c 'rm -r /usr/share/man/*'
+arch-chroot $ROOTFS /bin/sh -c 'rm -r /var/cache/pacman/pkg/*'
 arch-chroot $ROOTFS /bin/sh -c 'ln -s /usr/share/zoneinfo/UTC /etc/localtime'
 echo 'en_US.UTF-8 UTF-8' > $ROOTFS/etc/locale.gen
 arch-chroot $ROOTFS locale-gen

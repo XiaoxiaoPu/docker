@@ -27,6 +27,7 @@ echo ':arm:M::\x7fELF\x01\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x00\x2
 pacstrap -C ./pacman.conf -d -G -M $ROOTFS pacman sed shadow
 
 arch-chroot $ROOTFS /bin/sh -c 'rm -r /usr/share/man/*'
+arch-chroot $ROOTFS /bin/sh -c 'rm -r /var/cache/pacman/pkg/*'
 arch-chroot $ROOTFS /bin/sh -c 'ln -s /usr/share/zoneinfo/UTC /etc/localtime'
 echo 'en_US.UTF-8 UTF-8' > $ROOTFS/etc/locale.gen
 arch-chroot $ROOTFS locale-gen
